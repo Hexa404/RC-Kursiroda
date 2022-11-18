@@ -24,5 +24,27 @@ void loop() {
   int majumundur = bacachannel(channel3, -100, 100, -100);
   int kanankiri = bacachannel(channel1, -100, 100, 0);
 
-  if(
+  if(kanankiri<-50)
+  {
+    digitalWrite(motor_l1, HIGH);
+    digitalWrite(motor_l2, LOW);
+    digitalWrite(motor_r1, LOW);
+    digitalWrite(motor_r2, HIGH);
+  }
+  else if (kanankiri>50)
+  {
+    digitalWrite(motorl1, LOW);
+    digitalWrite(motorl2, HIGH);
+    digitalWrite(motor_r1, HIGH);
+    digitalWrite(motor_r2, LOW);
+  }
+  else
+  {
+    digitalWrite(motorl1, LOW);
+    digitalWrite(motorl2, LOW);
+    digitalWrite(motor_r1, LOW);
+    digitalWrite(motor_r2, LOW);
+  }
+  
+  
 }
