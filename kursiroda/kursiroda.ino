@@ -33,18 +33,38 @@ void loop() {
   }
   else if (kanankiri>50)
   {
-    digitalWrite(motorl1, LOW);
-    digitalWrite(motorl2, HIGH);
+    digitalWrite(motor_l1, LOW);
+    digitalWrite(motor_l2, HIGH);
     digitalWrite(motor_r1, HIGH);
     digitalWrite(motor_r2, LOW);
   }
   else
   {
-    digitalWrite(motorl1, LOW);
-    digitalWrite(motorl2, LOW);
+    digitalWrite(motor_l1, LOW);
+    digitalWrite(motor_l2, LOW);
     digitalWrite(motor_r1, LOW);
     digitalWrite(motor_r2, LOW);
   }
   
-  
+   if(majumundur<-50)
+  {
+    digitalWrite(motor_l1, HIGH);
+    digitalWrite(motor_l2, LOW);
+    digitalWrite(motor_r1, HIGH);
+    digitalWrite(motor_r2, LOW);
+  }
+  else if (majumundur>50)
+  {
+    digitalWrite(motor_l1, LOW);
+    digitalWrite(motor_l2, HIGH);
+    digitalWrite(motor_r1, LOW);
+    digitalWrite(motor_r2, HIGH);
+  }
+  else
+  {
+    digitalWrite(motor_l1, LOW);
+    digitalWrite(motor_l2, LOW);
+    digitalWrite(motor_r1, LOW);
+    digitalWrite(motor_r2, LOW);
+  }
 }
