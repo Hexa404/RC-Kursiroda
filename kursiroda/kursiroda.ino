@@ -68,8 +68,6 @@ void setup() {
 void loop() {
   int majumundur = bacachannel(channel3, -100, 100, 0);
   int kanankiri = bacachannel(channel1, -100, 100, 0);
-  Serial.println(majumundur);
-  
   if(kanankiri<50 && kanankiri>-50)
   {
     input_fb(majumundur);
